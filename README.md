@@ -96,8 +96,8 @@ FFT.fftShift(
 )
 ```
 
-For a round trip, pass the angular-frequency bin spacingâ€”not the original
-sample spacingâ€”to the inverse transform:
+For a round trip, pass the angular-frequency bin spacing, not the original
+sample spacing, to the inverse transform:
 
 ```swift
 let angularFrequencySpacing =
@@ -117,19 +117,19 @@ and `samplePositions` has the original sample spacing.
 For `N` samples, the forward transform is
 
 ```text
-X[k] = sum(x[n] * exp(-i * 2Ï€ * n * k / N), n = 0 ..< N)
+X[k] = sum(x[n] * exp(-i * 2π * n * k / N), n = 0 ..< N)
 ```
 
 and the inverse transform is
 
 ```text
-x[n] = (1 / N) * sum(X[k] * exp(i * 2Ï€ * n * k / N), k = 0 ..< N)
+x[n] = (1 / N) * sum(X[k] * exp(i * 2π * n * k / N), k = 0 ..< N)
 ```
 
 | Operation | `spacing` | Returned axis | Scaling |
 | --- | --- | --- | --- |
-| `FFT.fftw` | Sample spacing `Î”t` | `Ï‰â‚– = 2Ï€k / (NÎ”t)` | None |
-| `FFT.ifftw` | Angular-frequency spacing `Î”Ï‰` | `tâ‚™ = 2Ï€n / (NÎ”Ï‰)` | `1 / N` |
+| `FFT.fftw` | Sample spacing `Δt` | `ωₖ = 2πk / (NΔt)` | None |
+| `FFT.ifftw` | Angular-frequency spacing `Δω` | `tₙ = 2πn / (NΔω)` | `1 / N` |
 
 Both operations use unshifted bin order. If a spectrum has been centered with
 `FFT.fftShift`, restore it with `FFT.ifftShift` before applying the inverse
@@ -206,8 +206,8 @@ FFTW plans.
 This package wraps FFTW, developed by Matteo Frigo and Steven G. Johnson. If
 FFTW contributes to published work, its authors request citation of:
 
-> Matteo Frigo and Steven G. Johnson, â€œThe Design and Implementation of FFTW3,â€
-> *Proceedings of the IEEE* **93**(2), 216-231 (2005).
+> Matteo Frigo and Steven G. Johnson, “The Design and Implementation of FFTW3,”
+> *Proceedings of the IEEE* **93**(2), 216–231 (2005).
 > [doi:10.1109/JPROC.2004.840301](https://doi.org/10.1109/JPROC.2004.840301)
 
 ## License
