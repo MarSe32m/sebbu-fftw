@@ -1,0 +1,33 @@
+{
+  "originHash" : "c6ff9574b8c866dc1bcc8e289a8766719ea854bf3c45657e566cb2b15348c2f4",
+  "pins" : [
+    {
+      "identity" : "sebbu-cfftw",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MarSe32m/sebbu-cfftw",
+      "state" : {
+        "revision" : "531f5e7dd0e31ff81d9c5f91508ba4a271cb7446",
+        "version" : "3.3.11"
+      }
+    },
+    {
+      "identity" : "sebbu-fft",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MarSe32m/sebbu-fft",
+      "state" : {
+        "revision" : "3b2334359b720b2c796261593077d5906003f30b",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}
